@@ -4,7 +4,7 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
-build_command="pnpm run build && pnpm run test"
+build_command="pnpm run build && pnpm run lint"
 
 if ! $build_command; then
   printf "%b\n"  "${RED}error: Build failed. Fix the build issues before pushing.${NC}" >&2

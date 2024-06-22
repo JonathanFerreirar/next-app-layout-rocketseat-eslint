@@ -7,9 +7,9 @@ NC='\033[0m'
 build_command="pnpm run lint"
 
 if ! $build_command; then
-  printf "%b\n"  "${RED}error: Build failed. Fix the build issues before pushing.${NC}" >&2
+  printf "%b\n"  "${RED}error: Commit failed. Fix the build issues before pushing.${NC}" >&2
   exit 1
 else
-  printf "%b\n"  "${GREEN}Build: succeeded. Processing and Pushing...${NC}" >&2
+  printf "%b\n"  "${GREEN}Commit: succeeded. commited...${NC}" >&2
   exit 0
 fi
