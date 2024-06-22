@@ -2,25 +2,54 @@
   "name": "layout",
   "version": "0.1.0",
   "private": true,
+  "type": "module",
   "scripts": {
+    "plop": "plop",
     "dev": "next dev",
+    "lint": "next lint",
+    "prepare": "husky",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lt": "lt --port 3000",
+    "test": "jest --passWithNoTests",
+    "test:coverage": "jest --coverage",
+    "preinstall": "npx only-allow pnpm",
+    "ngrok": "ngrok http localhost:3000",
+    "preupdate": "npx --yes only-allow pnpm",
+    "ui:add": "pnpm dlx shadcn-ui@latest add",
+    "test:watch": "jest --watch --coverage --detectOpenHandles",
+    "test:build": "jest --passWithNoTests --detectOpenHandles --runInBand",
+    "test:commit":"jest --passWithNoTests --detectOpenHandles --findRelatedTests --runInBand"
   },
   "dependencies": {
+    "next": "14.2.4",
     "react": "^18",
-    "react-dom": "^18",
-    "next": "14.2.4"
+    "react-dom": "^18"
   },
   "devDependencies": {
-    "typescript": "^5",
+    "@rocketseat/eslint-config": "^2.2.2",
     "@types/node": "^20",
     "@types/react": "^18",
     "@types/react-dom": "^18",
+    "eslint": "^8.57.0",
+    "eslint-config-next": "14.2.4",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-prefer-arrow": "^1.2.3",
+    "eslint-plugin-prettier": "^5.1.3",
+    "eslint-plugin-simple-import-sort": "^8.0.0",
+    "eslint-plugin-tailwindcss": "^3.17.3",
+    "husky": "^9.0.11",
+    "only-allow": "^1.2.1",
+    "plop": "^4.0.1",
     "postcss": "^8",
+    "prettier": "3.3.2",
     "tailwindcss": "^3.4.1",
-    "eslint": "^8",
-    "eslint-config-next": "14.2.4"
+    "typescript": "^5"
+  },
+  "engines": {
+    "node": ">=18",
+    "pnpm": ">=8.0.0",
+    "npm": "please-use-pnpm",
+    "yarn": "please-use-pnpm"
   }
 }
